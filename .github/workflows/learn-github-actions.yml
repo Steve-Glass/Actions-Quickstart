@@ -1,4 +1,4 @@
-name: learn-github-actions-test
+name: learn-github-actions-testing
 on: [push]
 jobs:
   check-bats-version:
