@@ -2,7 +2,7 @@ name: learn-github-actions-testing
 on: [push]
 jobs:
   check-bats-version:
-    runs-on: macos-12
+    runs-on: macos-xl
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
