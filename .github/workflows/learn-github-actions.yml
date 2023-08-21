@@ -2,10 +2,13 @@ name: learn-github-actions-testing
 on: [push]
 jobs:
   build:
-    runs-on: macos-13
+    runs-on: macos-13-xlarge
     steps:
       - uses: actions/checkout@v2
       - name: Build
         run: swift build
       - name: Run tests
         run: swift test
+
+
+
