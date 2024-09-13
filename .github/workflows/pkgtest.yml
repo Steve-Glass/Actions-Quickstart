@@ -1,0 +1,22 @@
+name: packaging-test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  get-imaage:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Log in to the Container registry
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.steve-glass }}
+        password: ${{ secrets.PKG }}
+
+    - name: Pull Image from ghcr.io
+      run: docker pull ghcr.io/jkutner/buildpacks/jkutner_minecraft:0.2.3
