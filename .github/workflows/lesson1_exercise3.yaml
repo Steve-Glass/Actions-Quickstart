@@ -36,7 +36,7 @@ jobs:
      - uses: actions/checkout@v4
      - uses: actions/setup-node@v4.0.4
      - name: display
-       run: echo node -e "console.log('running from node!')"
+       run: node -e "console.log('running from node!')"
         
       
 
