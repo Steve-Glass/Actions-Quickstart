@@ -1,5 +1,5 @@
 name: learn-github-actions-testing
-on: [push]
+on: workflow_dispatch
 jobs:
   build:
     runs-on: macos-13-xlarge
